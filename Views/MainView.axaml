@@ -62,7 +62,7 @@
           <RowDefinition Height="Auto"/>
           <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Text="Finalna rata do zapłaty" Margin="0 12" />
+        <TextBlock Grid.Row="0" Text="Finalna rata amortyzacji" Margin="0 12" />
         <TextBlock Grid.Row="1" Text="{Binding FinalNonCalculatedValue}" Margin="0 12" />
       </Grid>
     </StackPanel>
