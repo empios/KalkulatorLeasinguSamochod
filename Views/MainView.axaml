@@ -1,0 +1,70 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:KalkulatorLeasinguSamochod.ViewModels"
+             xmlns:converters="clr-namespace:KalkulatorLeasinguSamochod.Converters"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="KalkulatorLeasinguSamochod.Views.MainView"
+             x:DataType="vm:MainViewModel">
+  <Design.DataContext>
+    <vm:MainViewModel />
+  </Design.DataContext>
+  <UserControl.Resources>
+    <converters:NumericUpDownValueConverter x:Key="NumericConverter"/>
+  </UserControl.Resources>
+  <DockPanel VerticalAlignment="Top">
+    <StackPanel>
+      <TextPresenter Margin="0 6" FontSize="24" TextAlignment="Center" Text="Oblicz ratę auta wrzucanego w koszty" />
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Margin="0 12" Text="Wprowadź wartość netto samochodu" />
+        <NumericUpDown Grid.Row="1" Value="{Binding NettoCarValue, Converter={StaticResource NumericConverter}}" Minimum="0" AllowSpin="false" ShowButtonSpinner="false" />
+      </Grid>
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Margin="0 12" Text="Wprowadź wartość netto raty leasingowej" />
+        <NumericUpDown Grid.Row="1" Value="{Binding NettoLeasingRateValue, Converter={StaticResource NumericConverter}}" Minimum="0" AllowSpin="false" ShowButtonSpinner="false" />
+      </Grid>
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Margin="0 12" Text="Wybierz rodzaj amortyzacji" />
+        <ComboBox SelectedItem="{Binding SelectedPercentage, Mode=TwoWay}" Grid.Row="1" Width="100">
+          <ComboBoxItem Content="50%" Tag="0,5" />
+          <ComboBoxItem Content="100%" Tag="1" />
+        </ComboBox>
+      </Grid>
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Button Click="CalculateClickHandler" Margin="0 12">Oblicz</Button>
+      </Grid>
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Finalna rata wliczona w koszt" Margin="0 12" />
+        <TextBlock Grid.Row="1" Text="{Binding FinalValue}" Margin="0 12" />
+      </Grid>
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Finalna rata do zapłaty" Margin="0 12" />
+        <TextBlock Grid.Row="1" Text="{Binding FinalNonCalculatedValue}" Margin="0 12" />
+      </Grid>
+    </StackPanel>
+  </DockPanel>
+</UserControl>

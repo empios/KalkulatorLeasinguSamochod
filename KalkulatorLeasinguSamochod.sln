@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalkulatorLeasinguSamochod", "KalkulatorLeasinguSamochod.csproj", "{C1058DC3-5620-40DC-8D2D-7B61E6E4BB46}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KalkulatorLeasinguSamochod.Desktop", "..\KalkulatorLeasinguSamochod.Desktop\KalkulatorLeasinguSamochod.Desktop.csproj", "{68D03EBE-2123-4018-BEE2-97EDD46EB51E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1058DC3-5620-40DC-8D2D-7B61E6E4BB46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1058DC3-5620-40DC-8D2D-7B61E6E4BB46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1058DC3-5620-40DC-8D2D-7B61E6E4BB46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1058DC3-5620-40DC-8D2D-7B61E6E4BB46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68D03EBE-2123-4018-BEE2-97EDD46EB51E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68D03EBE-2123-4018-BEE2-97EDD46EB51E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68D03EBE-2123-4018-BEE2-97EDD46EB51E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68D03EBE-2123-4018-BEE2-97EDD46EB51E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0EE01DCB-62E9-4681-BC81-A23FB4A34DEE}
+	EndGlobalSection
+EndGlobal
